@@ -25,4 +25,4 @@ With Music
 ## 設計書
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/d/1lM9COR6-boulR3B9GIiD9h1Sojpuok5qknoL2lUh4OE/edit#gid=0
+https://docs.google.com/spreadsheets/d/1lM9COR6-boulR3B9GIiD9h1Sojpuok5qknoL2lUh4OE/edit?usp=sharing
