@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_054925) do
+ActiveRecord::Schema.define(version: 2020_08_23_083506) do
 
   create_table "favorites", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,11 +19,19 @@ ActiveRecord::Schema.define(version: 2020_08_18_054925) do
     t.integer "music_id"
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "genre_id"
+    t.string "category"
+  end
+
   create_table "music_comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "music_id"
+    t.text "comment"
   end
 
   create_table "musics", force: :cascade do |t|
@@ -33,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_054925) do
     t.string "title"
     t.string "body"
     t.string "post_image_id"
+    t.integer "genre_id"
+    t.string "artist"
   end
 
   create_table "relationships", force: :cascade do |t|

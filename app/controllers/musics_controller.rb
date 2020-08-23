@@ -1,5 +1,10 @@
 class MusicsController < ApplicationController
 	before_action :authenticate_user!
+
+  def new
+  	@music = Music.new
+  end
+
   def index
   	@user = current_user
   	@musics = Music.all
@@ -10,8 +15,8 @@ class MusicsController < ApplicationController
   	@music = Music.find(params[:id])
   	@user = @music.user
   	@new_music = Music.new
-  	@music_comment = Music_comment.new
-  	@music_comment = @music.music_comments
+  	@music_comment = MusicComment.new
+  	@music_comments = @music.music_comments
   end
 
 
@@ -32,7 +37,7 @@ class MusicsController < ApplicationController
   		@musics = Music.all
   		@user = current_user
   		flash[:error] = "error"
-  		render :index
+  		render :new
   	end
     end
 
@@ -46,6 +51,7 @@ class MusicsController < ApplicationController
     	flash[:notice] = "error"
     	render :edit
     end
+end
 
     def destroy
     	@music = Music.find(params[:id])
@@ -55,4 +61,6 @@ class MusicsController < ApplicationController
 
     private
     def music_params
-    	params.require(:music).permit(:title, :body)
+    	params.require(:music).permit(:title, :body,:post_iamge_id, :genre_id, :category, :artist, :music_comment)
+    end
+end
