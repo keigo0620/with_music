@@ -9,6 +9,7 @@ class MusicsController < ApplicationController
   	@user = current_user
   	@musics = Music.all
   	@music = Music.new
+    @genres = Genre.all
   end
 
   def show
@@ -32,7 +33,7 @@ class MusicsController < ApplicationController
   	@music.user_id = current_user.id
   	if @music.save
   		flash[:notice] = "successfully"
-  		redirect_to music_path(@music.id)
+  		redirect_to musics_path
   	else
   		@musics = Music.all
   		@user = current_user
@@ -59,8 +60,12 @@ end
     	redirect_to musics_path
     end
 
+    def search
+      @musics = Music.search(params[:search])
+    end
+
     private
     def music_params
-    	params.require(:music).permit(:title, :body,:post_iamge_id, :genre_id, :category, :artist, :music_comment)
+    	params.require(:music).permit(:title,:post_iamge, :genre_id, :category, :artist, :music_comment,:impression,:name)
     end
 end

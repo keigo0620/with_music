@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>WithMusic</title>
+    <script src="https://kit.fontawesome.com/82d88901b5.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,9 +17,7 @@
     <nav class="text-muted"><span><strong>with music</strong></span></nav>
 </nav>
 
-  <nav class="text-muted"><span><strong><%= form_tag(musics_path,:method => 'get' ) do %>
-        <%= text_field_tag :search %>
-        <%= submit_tag 'Search', :name => nil %></strong></span>
+  
 <nav>
   <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
@@ -63,7 +62,7 @@
       <p><i class="fas fa-sign-in-alt"></i>login</p>
       <% end %>
     </li>
-    <% end %>
+    <%# end %>
     <% end %>
   </ul>
 </nav>
@@ -74,7 +73,6 @@
   <div class='container'>
       <div class='row'>
         <div class='col-xs-3 col-xs-offset-9'>
-          <p></p>
         </div>
       </div>
     </div>

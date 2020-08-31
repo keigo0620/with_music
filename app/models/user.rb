@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :musics, dependent: :destroy#アソシエーション 。Bookersの復習
   has_many :music_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  attachment :profile_image_id
+  attachment :profile_image
 
   # ====================自分がフォローしているユーザーとの関連 ===================================
   #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)

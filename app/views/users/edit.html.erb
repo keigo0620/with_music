@@ -13,12 +13,14 @@
     </div>
 
     <label for="Image">Image</label>
-    <%= f.attachment_field :profile_image_id  %>
+    <%= f.attachment_field :profile_image  %>
   </div>
 
   <div class="field">
-    <%#= f.label :introduction %>
-    <%#= f.text_area :introduction, class: "introduction" %>
+    <%#= f.label :history %>
+    <%#= f.text_field :history, class: "history" %>
+    <%= f.label :introduction %>
+    <%= f.text_area :introduction, class: "introduction" %>
   </div>
 
 
