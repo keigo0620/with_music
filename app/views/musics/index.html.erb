@@ -21,6 +21,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>image</th>
             <th>artist</th>
             <th></th>
             <th>title</th>
@@ -33,6 +34,7 @@
         <tbody>
           <% @musics.each do |music| %>
           <tr>
+            <td><%= attachment_image_tag @music, :post_image, fallback: "no_image.jpg", size: "60x60" %></td>
           <td><%= music.artist %></td>
           <%= link_to music_path(music.id) do %>
               <td>
@@ -43,7 +45,7 @@
               </td>
               <td></td>
               <td><%= music.genre.category %></td>
-              <td><%= music.location %>
+              <td><%#= music.location.seen %>
               <!--以下いいね機能の実装-->
               <% if music.favorited_by?(current_user) %>
               <td>

@@ -1,6 +1,7 @@
 class Music < ApplicationRecord
 	belongs_to :user, optional: true
 	belongs_to :genre
+	belongs_to :location
 	has_many :music_comments, dependent: :destroy
 	has_many :favorites, dependent: :destroy
 	attachment :post_image
@@ -11,7 +12,7 @@ class Music < ApplicationRecord
 	end
 	def self.search(search)
       if search
-        where(['name LIKE ?', "%#{search}%"])
+        where(['category LIKE ?', "%#{search}%"])
       else
         all
       end

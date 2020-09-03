@@ -10,6 +10,7 @@ class MusicsController < ApplicationController
   	@musics = Music.all
   	@music = Music.new
     @genres = Genre.all
+    @locations = Location.all
   end
 
   def show
@@ -66,6 +67,6 @@ end
 
     private
     def music_params
-    	params.require(:music).permit(:title,:post_iamge, :genre_id, :category, :artist, :music_comment,:impression,:name)
+    	params.require(:music).permit(:title,:post_image, :genre_id, :category, :artist, :music_comment,:impression,:name,:seen,:location_id)
     end
 end

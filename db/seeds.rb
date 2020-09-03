@@ -15,3 +15,24 @@ category:'R&B'
 Genre.create!(
 category:'J-POP'
 	)
+Location.create!(
+	seen: '夏に聞きたい曲'
+	)
+Location.create!(
+	seen: '冬に聞きたい曲'
+	)
+Location.create!(
+	seen: 'ドライブミュージック'
+	)
+Location.create!(
+	seen: '通勤、通学'
+	)
+Location.create!(
+	seen: '家事をしながら'
+	)
+Location.create!(
+	seen: 'ティータイム'
+	)
+Location.create!(
+	seen: 'リラックス'
+	)

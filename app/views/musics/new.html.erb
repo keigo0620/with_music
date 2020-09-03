@@ -8,11 +8,13 @@
       <h3>title<%= f.text_field :title %></h3>
       <h3>point<%= f.text_area :impression %></h3>
       <h3>genre<%= f.collection_select :genre_id, Genre.all,:id,:category %></h3>
-      <h3>location<%#= f.select :genre_id, ['夏に聞きたい曲','冬に聞きたい曲','クリスマスソング',
-        'ドライブ','通勤','家事','ティータイム','リフレッシュ,リラックス'], {include_blank: '---'} %></h3>
-        <%#= f.collection_select :genre, Genre.all, :id, :category %>
+      <h3>location<%= f.collection_select :location_id, Location.all,:id,:seen %></h3>
+
       <%= f.submit '新規登録', class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
-<%#= f.select :genre_id, ['R&B', 'J-POP', 'HOUSE Music', 'アニソン','ヒーリングミュージック','JAZZ','K-POP','HIP HOP'], {include_blank: '---'} %></h3>
+<%#= f.select :genre_id, ['R&B', 'J-POP', 'HOUSE Music', 'アニソン','ヒーリングミュージック','JAZZ','K-POP','HIP HOP'], {include_blank: '---'} %>
+<%#= f.select :genre_id, ['夏に聞きたい曲','冬に聞きたい曲','クリスマスソング',
+        'ドライブ','通勤','家事','ティータイム','リフレッシュ,リラックス'], {include_blank: '---'} %>
+        <%#= f.collection_select :genre, Genre.all, :id, :category %>
