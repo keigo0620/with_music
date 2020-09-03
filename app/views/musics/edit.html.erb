@@ -9,6 +9,7 @@
     <li><%= messages %></li>
   <% end %>
 <% end %>
+<%= attachment_image_tag @music, :post_image,  fallback: "no_image.jpg", size: "60x60" %>
   <h4>Artist</h4>
   <div class="field">
     <%= f.text_field :artist, :size => "50*50" %>
@@ -23,9 +24,7 @@
   <div class="field">
     <h4>genre</h4>
       <%= f.collection_select :genre_id, Genre.all,:id,:category %>
-    <h4>location</h4>
-    <%= f.select :genre_id, ['夏に聞きたい曲','冬に聞きたい曲','クリスマスソング',
-        'ドライブ','通勤','家事','ティータイム','リフレッシュ,リラックス'], {include_blank: '---'} %>
+    <h4>location</h4><%= f.collection_select :location_id, Location.all,:id,:seen %>
   </div>
 
   <div class="actions row">

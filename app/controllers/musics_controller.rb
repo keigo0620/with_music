@@ -11,6 +11,8 @@ class MusicsController < ApplicationController
   	@music = Music.new
     @genres = Genre.all
     @locations = Location.all
+    @q = Music.ransack(params[:q])
+    @musics = @q.result(distinct: true)
   end
 
   def show

@@ -7,13 +7,31 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Genre.create!(
-category:'HIP HOP'
+category:'J-POP'
         )
 Genre.create!(
 category:'R&B'
 	)
 Genre.create!(
-category:'J-POP'
+category:'HIP HOP'
+	)
+Genre.create!(
+category:'K-POP'
+	)
+Genre.create!(
+category:'Huse Music'
+	)
+Genre.create!(
+category:'ヒーリングMusic'
+	)
+Genre.create!(
+category:'Rock'
+	)
+Genre.create!(
+category:'アニソン'
+	)
+Genre.create!(
+category:'Drive Music'
 	)
 Location.create!(
 	seen: '夏に聞きたい曲'

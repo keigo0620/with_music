@@ -4,11 +4,27 @@
 
 	<%= form_for @music, :url => {controller:  :musics, action: :create} do |f| %>
 	<%= f.attachment_field :post_image %>
-      <h3>Artist<%= f.text_field :artist %></h3>
-      <h3>title<%= f.text_field :title %></h3>
-      <h3>point<%= f.text_area :impression %></h3>
-      <h3>genre<%= f.collection_select :genre_id, Genre.all,:id,:category %></h3>
-      <h3>location<%= f.collection_select :location_id, Location.all,:id,:seen %></h3>
+      <h3>Artist</h3>
+    <div class="field">
+        <%= f.text_field :artist %>
+    </div>
+      <h3>title</h3>
+      <div class="field">
+        <%= f.text_field :title %>
+    </div>
+      <div class="field">
+      <h3>point</h3>
+      <div class="field">
+        <%= f.text_area :impression %>
+    </div>
+      <h3>genre</h3>
+      <div class="field">
+        <%= f.collection_select :genre_id, Genre.all,:id,:category %>
+      </div>
+      <h3>location</h3>
+      <div class="field">
+      <%= f.collection_select :location_id, Location.all,:id,:seen %>
+    </div>
 
       <%= f.submit '新規登録', class: "btn btn-primary" %>
     <% end %>
