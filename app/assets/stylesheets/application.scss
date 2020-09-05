@@ -16,6 +16,16 @@
  @import "bootstrap-sprockets";  /*ここを追加*/
  @import "bootstrap";            /*ここを追加*/
 
+*{
+  box-sizing: border-box;
+ }
+.text-muted{
+	font-size:30px;
+  Color:#FFFFFF;
+}
+.footer {
+	background-color:black;
+}
 
 
 

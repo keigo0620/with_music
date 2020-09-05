@@ -14,7 +14,7 @@
   <div class="container">
 
 <nav class="nav navbar-nav navbar-left">
-    <nav class="text-muted"><span><strong>with music</strong></span></nav>
+    <nav class="text-muted"><span><strong><%= link_to "with music" , musics_path %></strong></span></nav>
 </nav>
 
 
@@ -26,18 +26,18 @@
       <% end %>
       </li>
       <li><%= link_to users_path  do %>
-      <p><i class="fas fa-user"></i>Users</p>
+      <p><i class="fas fa-user"></i>マイページ</p>
       <% end %>
       </li>
 
 
       <li><%= link_to musics_path do %>
-      <p><i class="fas fa-book"></i>Musics</p>
+      <p><i class="fas fa-music"></i>投稿</p>
       <% end %>
       </li>
 
       <li><%= link_to destroy_user_session_path, method: :delete do %>
-      <p><i class="fas fa-sign-out-alt"></i>logout</p>
+      <p><i class="fas fa-sign-out-alt"></i>ログアウト</p>
       <% end %>
       </li>
 
@@ -69,15 +69,16 @@
 </div>
 </header>
 <%= yield %>
-<footer>
+<div class="footer">
   <div class='container'>
       <div class='row'>
         <div class='col-xs-3 col-xs-offset-9'>
-          <li>
-            <a href="https://www.apple.com/jp/apple-music/">
-          <i class="fab fa-apple"></i>
+          <p>Click here<i class="fas fa-arrow-right fa-2x"></i><a href="https://www.apple.com/jp/apple-music/">
+          <i class="fab fa-apple fa-3x"></i>
+          <i class="fab fa-amazon fa-3x"></i>
+          <i class="fab fa-spotify fa-3x"></i>
         </a>
-        </li>
+        </p>
         </div>
       </div>
     </div>

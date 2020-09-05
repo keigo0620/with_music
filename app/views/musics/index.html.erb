@@ -7,38 +7,37 @@
       <% end %>
     <% end %>
    </div>
-  <div class="row">
   <div class="col-xs-3">
-    <%= render 'users/sidebar' ,user: @user,music:@music %>
     </div>
-    <div class="col-xs-9">
-      <h2>Posts Serch</h2>
-      <nav class="text-muted"><span><strong><%#= search_form_for @q do |f| %>
-        <%= form_tag(musics_path,:method => 'get' ) do %>
-        <%= text_field_tag :search %>
-        <%#= f.label :category, "genre" %>
-        <%#= f.search_field :genre_category_cont %>
-        <%#= f.submit "検索" %>
-        <%= submit_tag 'Search', :name => nil %></strong></span>
-      </nav>
+      <h2>キーワード検索</h2>
+      <%= search_form_for @q do |f| %>
+      <div class="field">
+        <h3>genre</h3>
+        <%= f.collection_select :genre_id, Genre.all,:id,:category %>
+        <%= f.submit "検索" %>
       <%= link_to "+NEW POST", new_music_path, class: "btn btn-primary btn-circle pull-right" %>
+      <h1>投稿一覧</h1>
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>image</th>
-            <th>artist</th>
+            <th>投稿者</th>
+            <th>Image</th>
+            <th>アーティスト</th>
             <th></th>
-            <th>title</th>
+            <th>タイトル</th>
             <th></th>
-            <th>genre</th>
-            <th>location</th>
-            <th>comment</th>
+            <th>ジャンル</th>
+            <th>おすすめシーン</th>
+            <th>一言</th>
+            <th>イイね</th>
+            <th>コメント</th>
             <th colspan="3"></th>
           </tr>
         </thead>
         <tbody>
           <% @musics.each do |music| %>
           <tr>
+            <td><%= @user.name %>
             <td><%= attachment_image_tag @music, :post_image, fallback: "no_image.jpg", size: "60x60" %></td>
           <td><%= music.artist %></td>
           <%= link_to music_path(music.id) do %>
@@ -59,9 +58,6 @@
               <td>
                  <%= render 'favorites/favorite_button', music: music %>
               </td>
-              <%#= link_to music_favorites_path(music), method: :delete do %>
-                <%#i class="fa fa-heart" aria-hidden="true"></i>
-              <%#= music.favorites.count %>
               <% end %>
             </td>
             <% else %>
@@ -78,6 +74,7 @@
             <%= link_to "#{music.music_comments.count} comment", music_path(music.id) %>
             </td>
             </tr>
+            <%#= paginate @musics %>
             <% end %>
           <% end %>
         </tbody>
@@ -85,3 +82,13 @@
     </div>
   </div>
 </div>
+<%#= form_tag(musics_path,:method => 'get' ) do %>
+        <%#= text_field_tag :search %>
+        <%#= submit_tag 'Search', :name => nil %></strong></span>
+        <%#= search_form_for @q do |f| %>
+        <%#= f.label :genre, "ジャンル" %>
+        <%#= f.search_field :genre_category_cont %>
+        <%#= f.submit "検索" %>
+        <%#= f.label :location, "おすすめシーン" %>
+        <%#= f.search_field :location_seen_cont %>
+        <%#= f.submit "検索" %>

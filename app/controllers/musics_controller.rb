@@ -8,10 +8,11 @@ class MusicsController < ApplicationController
   def index
   	@user = current_user
   	@musics = Music.all
+    @musics = Music.page(params[:page]).reverse_order
   	@music = Music.new
     @genres = Genre.all
     @locations = Location.all
-    @q = Music.ransack(params[:q])
+    @q = current_user.musics.ransack(params[:q])
     @musics = @q.result(distinct: true)
   end
 

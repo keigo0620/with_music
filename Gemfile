@@ -67,6 +67,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'ransack'
+gem 'kaminari','~> 1.2.1'
 group :production do
   gem 'mysql2'
 end
