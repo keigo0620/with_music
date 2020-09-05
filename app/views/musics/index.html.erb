@@ -11,9 +11,11 @@
     </div>
       <h2>キーワード検索</h2>
       <%= search_form_for @q do |f| %>
-      <div class="field">
-        <h3>genre</h3>
-        <%= f.collection_select :genre_id, Genre.all,:id,:category %>
+        <%= f.label :genre, "ジャンル" %>
+        <%= f.search_field :genre_category_cont %>
+        <%= f.submit "検索" %>
+        <%= f.label :location, "おすすめシーン" %>
+        <%= f.search_field :location_seen_cont %>
         <%= f.submit "検索" %>
       <%= link_to "+NEW POST", new_music_path, class: "btn btn-primary btn-circle pull-right" %>
       <h1>投稿一覧</h1>
@@ -37,7 +39,7 @@
         <tbody>
           <% @musics.each do |music| %>
           <tr>
-            <td><%= @user.name %>
+            <td><%= @user.name %></td>
             <td><%= attachment_image_tag @music, :post_image, fallback: "no_image.jpg", size: "60x60" %></td>
           <td><%= music.artist %></td>
           <%= link_to music_path(music.id) do %>

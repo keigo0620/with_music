@@ -1,27 +1,28 @@
+<body>
 <div class="body-height">
 <div class="container">
-	<h1>New Post</h1>
-
+  <div class="field">
+	<h1>新規投稿</h1>
 	<%= form_for @music, :url => {controller:  :musics, action: :create} do |f| %>
 	<%= f.attachment_field :post_image %>
-      <h3>Artist</h3>
+      <h3>アーティスト</h3>
     <div class="field">
         <%= f.text_field :artist %>
     </div>
-      <h3>title</h3>
+      <h3>タイトル</h3>
       <div class="field">
         <%= f.text_field :title %>
     </div>
       <div class="field">
-      <h3>point</h3>
+      <h3>一言</h3>
       <div class="field">
         <%= f.text_area :impression %>
     </div>
-      <h3>genre</h3>
+      <h3>ジャンル</h3>
       <div class="field">
         <%= f.collection_select :genre_id, Genre.all,:id,:category %>
       </div>
-      <h3>location</h3>
+      <h3>おすすめのシーン</h3>
       <div class="field">
       <%= f.collection_select :location_id, Location.all,:id,:seen %>
     </div>
@@ -30,6 +31,9 @@
     <% end %>
   </div>
 </div>
+</div>
+</div>
+</body>
 <%#= f.select :genre_id, ['R&B', 'J-POP', 'HOUSE Music', 'アニソン','ヒーリングミュージック','JAZZ','K-POP','HIP HOP'], {include_blank: '---'} %>
 <%#= f.select :genre_id, ['夏に聞きたい曲','冬に聞きたい曲','クリスマスソング',
         'ドライブ','通勤','家事','ティータイム','リフレッシュ,リラックス'], {include_blank: '---'} %>

@@ -1,5 +1,7 @@
+<div class="example">
+  <%= image_tag 'MUSIC2.jpg' %><br>
+<div class="field">
 <h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 <!-- ここから追加 -->
@@ -8,7 +10,6 @@
       <%= f.text_field :name %>
     </div>
     <!-- ここまで追加 -->
-
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -33,3 +34,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

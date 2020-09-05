@@ -18,12 +18,13 @@
 
 			 <td><%= link_to user_path(@user.id) do %></td>
             <%= @user.name %>
+            <%#= link_to, user_path(music.user.id) %>
               <%= attachment_image_tag @user, :profile_image,  fallback: "no_image.jpg", size: "60x60" %>
             <% end %>
-                    <td><%= @music.artist %>
+          <td><%= @music.artist %></td>
 					<td><%=  @music.title  %></td>
 					<td><%= @music.genre.category %></td>
-                    <td><%= @music.location.seen %></td>
+          <td><%= @music.location.seen %></td>
 					<td><%= @music.impression %></td>
 					<% if @music.user_id == current_user.id %>
 					   <td> <%= link_to "Edit", edit_music_path(@music.id) ,class:"btn-sm btn-success edit_music_10349" %></td>
