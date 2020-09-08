@@ -1,4 +1,4 @@
-
+<div class="editbody">
 <h1>Editing Music</h1>
 
 <%= form_for(@music) do |f| %>
@@ -9,6 +9,7 @@
     <li><%= messages %></li>
   <% end %>
 <% end %>
+<div class="field">
 <%= attachment_image_tag @music, :post_image,  fallback: "no_image.jpg", size: "60x60" %>
   <h4>Artist</h4>
   <div class="field">
@@ -35,4 +36,5 @@
 <%= link_to "Show", music_path %>
 <%= link_to "Back", musics_path %>
 
+</div>
 </div>

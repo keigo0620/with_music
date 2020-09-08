@@ -9,6 +9,7 @@ class MusicsController < ApplicationController
   	@user = current_user
   	@musics = Music.all
     @musics = Music.page(params[:page]).reverse_order
+    @musics = Kaminari.paginate_array(@musics).page(params[:page]).per(5)
   	@music = Music.new
     @genres = Genre.all
     @locations = Location.all

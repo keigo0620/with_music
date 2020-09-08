@@ -16,13 +16,11 @@
 <nav class="nav navbar-nav navbar-left">
     <nav class="text-muted"><span><strong><%= link_to "with music" , users_path %></strong></span></nav>
 </nav>
-
-
 <nav>
   <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
     <li><%= link_to user_path(current_user.id) do %>
-      <p><i class="fas fa-home"></i>Home<p>
+      <p><i class="fas fa-home"></i>Home</p>
       <% end %>
       </li>
       <li><%= link_to users_path  do %>
@@ -66,6 +64,7 @@
     <% end %>
   </ul>
 </nav>
+</div>
 </div>
 </header>
 <%= yield %>

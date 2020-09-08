@@ -1,3 +1,4 @@
+<div class="field">
 <h1>User Editing</h1>
 
 <%= form_for(@user) do |f| %>
@@ -11,7 +12,7 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: "name" %>
     </div>
-
+  <div class="field">
     <label for="Image">Image</label>
     <%= f.attachment_field :profile_image  %>
   </div>

@@ -38,6 +38,7 @@
 .example p {
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
+  font-size:20px;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
@@ -52,8 +53,26 @@
 
 .example img {
   width: 100%;
+  height: 50%;
   }
-
+.MUSIC1 {
+  background-image: url(MUSIC1.jpg);
+}
+.MUSIC2 {
+  background-image: url(MUSIC2.jpg);
+}
+.MUSIC3 {
+  background-image: url(MUSIC3.jpg);
+}
+.MUSIC4 {
+  background-image: url(MUSIC4.jpg);
+}
+.MUSIC5 {
+  background-image: url(MUSIC5.jpg);
+}
+#container{
+  height: 600px;
+}
 
 
 

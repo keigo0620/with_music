@@ -9,21 +9,24 @@
     <tbody>
     <tr>
         <th>User Name</th>
-        <th><%= @user.name %></th>
+        <th><%= @user.name %>さんのページ</th>
         <%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", size: "100x100" %>
     </tr>
     <tr>
-      <th>
+       <th>
         <p>follows</p>
-     <th><%=link_to @user.followings.count, follows_user_path(@user.id) %><th>
+       <th><%=link_to @user.followings.count, follows_user_path(@user.id) %><th>
     </tr>
 
     <tr>
-      <th>followers</th>
-      <th><%=link_to @user.followers.count, followers_user_path(@user.id) %></th>
-      <tr>
-    <%= link_to '', edit_user_path(@user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{@user.id}" %>
+        <th>followers</th>
+        <th><%=link_to @user.followers.count, followers_user_path(@user.id) %></th>
     </tr>
+    <tr>
+    <th><%= link_to '', edit_user_path(@user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{@user.id}" %>
+    </th>
+    </tr>
+
      <% if current_user != @user %>
                   <!--ログイン済みのユーザーである場合-->
      <% if @user.followed_by?(current_user) %>
@@ -41,7 +44,7 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th>Image</th>
+          <th>画像</th>
           <th>アーティスト</th>
           <th>タイトル</th>
           <th>ジャンル</th>
@@ -54,7 +57,7 @@
           <tr>
             <td>
               <%= link_to  user_path(@user.id) do %>
-                <%= attachment_image_tag @user, :profile_image, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg", size: "60x60" %>
+                <%= attachment_image_tag music, :post_image, format: 'jpg' ,size: "100x100", fallback: "no_image.jpg" %>
               <% end %>
             </td>
             <td><%= music.artist %></td>
