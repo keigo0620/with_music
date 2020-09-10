@@ -1,3 +1,5 @@
+
+<div class="usershow">
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
   <% end %>
@@ -39,7 +41,7 @@
 </table>
    </div>
     <div class="col-xs-9">
-      <h3>フォローユーザー</h3>
+      <h3>投稿履歴</h3>
       <%= link_to "+NEW POST", new_music_path, class: "btn btn-primary btn-circle pull-right" %>
       <table class="table table-striped">
         <thead>
@@ -73,4 +75,5 @@
       </table>
     </div>
   </div>
+</div>
 </div>

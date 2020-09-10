@@ -1,3 +1,4 @@
+<div class="showbody">
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
@@ -45,6 +46,7 @@
   <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
   <%= render 'music_comments/comments', music: @music %>
 <% end %>
+</div>
 </div>
 </div>
 </div>

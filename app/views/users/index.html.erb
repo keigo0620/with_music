@@ -1,4 +1,4 @@
-<body>
+<div class="userindex">
 <div class="container">
     <div class="row">
     <div class="col-xs-3">
@@ -6,6 +6,7 @@
     </div>
     <div class="col-xs-9">
           <h2>マイページ</h2>
+          <%= link_to "+NEW POST", new_music_path, class: "btn btn-primary btn-circle pull-right" %>
           <table class="table table-striped">
             <thead>
             <tr>
@@ -42,4 +43,4 @@
         </div>
       </div>
     </div>
-  </body>
+  </div>

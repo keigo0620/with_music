@@ -1,5 +1,7 @@
+<div class="useredit">
+<div class="body-height">
 <div class="field">
-<h1>User Editing</h1>
+<h1>プロフィール編集</h1>
 
 <%= form_for(@user) do |f| %>
 <% if @user.errors.any? %>
@@ -9,19 +11,17 @@
   <% end %>
   <% end %>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "name" %>
+   <h3>名前</h3>
+    <%= f.text_field :name%>
     </div>
   <div class="field">
-    <label for="Image">Image</label>
+   <h3>画像</h3>
     <%= f.attachment_field :profile_image  %>
   </div>
 
   <div class="field">
-    <%#= f.label :history %>
-    <%#= f.text_field :history, class: "history" %>
-    <%= f.label :introduction %>
-    <%= f.text_area :introduction, class: "introduction" %>
+    <h3>紹介文</h3>
+    <%= f.text_area :introduction %>
   </div>
 
 
@@ -30,3 +30,4 @@
     <%= f.submit "Update User" %>
   </div>
 <% end %>
+</div>

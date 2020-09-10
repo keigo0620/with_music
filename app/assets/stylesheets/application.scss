@@ -18,18 +18,52 @@
 
 *{
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
  }
 .text-muted{
 	font-size:30px;
   Color:#FFFFFF;
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+
 }
 .footer {
 	background-color:black;
 	color: white;
 }
-
+.newbody{
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.editbody {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.showbody {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.indexbody {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.userindex {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.usershow {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+.useredit {
+  background-color: #EEEEEE;
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
 .field {
 	text-align: center;
+  background-color: #EEEEEE;
 }
 .example {/*親div*/
   position: relative;/*相対配置*/
@@ -57,36 +91,77 @@
   }
 .MUSIC1 {
   background-image: url(MUSIC1.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .MUSIC2 {
   background-image: url(MUSIC2.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .MUSIC3 {
   background-image: url(MUSIC3.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .MUSIC4 {
   background-image: url(MUSIC4.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .MUSIC5 {
   background-image: url(MUSIC5.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 #container{
   height: 600px;
 }
 .about1 {
   background-image: url(about1.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .about2 {
+font-family: "MS Pゴシック" ;
   background-image: url(about2.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .about3 {
   background-image: url(about3.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 .about4 {
   background-image: url(about4.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: black;/*文字は白に*/
+  font-size:30px;
 }
 .about5 {
   background-image: url(about5.jpg);
+  position: relative;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-size:30px;
 }
 
 
