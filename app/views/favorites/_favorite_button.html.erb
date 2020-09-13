@@ -1,9 +1,9 @@
 <% if current_user.favorites.find_by(music_id: music.id) %>
-  <%= link_to music_favorites_path(music), method: :delete, remote: true do %>
+  <%= link_to music_favorites_path(music), method: :delete do %>
     <i class="glyphicon glyphicon-heart"></i>
   <% end %>
 <% else %>
-  <%= link_to music_favorites_path(music), method: :post, remote: true do %>
+  <%= link_to music_favorites_path(music), method: :post do %>
     <i class="glyphicon glyphicon-heart-empty"></i>
   <% end %>
 <% end %>

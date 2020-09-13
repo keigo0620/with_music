@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :musics, dependent: :destroy#アソシエーション 。Bookersの復習
   has_many :music_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  validates :introduction, presence: true, length: { maximum:200}
+  #validates :introduction, presence: true, length: { maximum:200}
   attachment :profile_image
 
   # ====================自分がフォローしているユーザーとの関連 ===================================

@@ -1,10 +1,10 @@
 <div class="useredit">
 <div class="body-height">
 <div class="field">
-<h1>プロフィール編集</h1>
+<h1>登録情報編集</h1>
 
-<%= form_for(@user) do |f| %>
-<% if @user.errors.any? %>
+   <%= form_for(@user) do |f| %>
+   <% if @user.errors.any? %>
   <h2><%= @user.errors.count %>error prohibited this obj from being saved:</h2>
   <ul><% @user.errors.full_messages.each do |messages| %></ul>
     <li><%= messages %></li>
@@ -13,21 +13,23 @@
   <div class="field">
    <h3>名前</h3>
     <%= f.text_field :name%>
-    </div>
+  </div>
   <div class="field">
    <h3>画像</h3>
     <%= f.attachment_field :profile_image  %>
   </div>
 
   <div class="field">
-    <h3>紹介文</h3>
+    <h3>自己紹介文</h3>
     <%= f.text_area :introduction %>
   </div>
 
 
 
   <div class="actions">
-    <%= f.submit "Update User" %>
+    <%= f.submit "登録情報更新" %>
   </div>
 <% end %>
+</div>
+</div>
 </div>

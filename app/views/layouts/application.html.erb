@@ -6,8 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body>
 <header class="navbar navbar-inverse">
@@ -72,10 +72,12 @@
   <div class='container'>
       <div class='row'>
         <div class='col-xs-3 col-xs-offset-9'>
-          <p>Click here<i class="fas fa-arrow-right fa-2x"></i><a href="https://www.apple.com/jp/apple-music/">
-          <i class="fab fa-apple fa-3x"></i>
-        </a>
-        </p>
+          <nav>
+               <ul class="nav navbar-nav navbar-right">
+               <li><a href="https://www.apple.com/jp/apple-music/"><i class="fab fa-apple fa-3x"></i></a></li>
+               <li><a href="https://www.youtube.com/"><i class="fab fa-youtube fa-3x"></i></a></li>
+               <li><a href="https://www.amazon.co.jp/music/unlimited/ref=dmm_acq_marin_d_bra_zzz_5tXCd5hO-dc_c_423719225969/"><i class="fab fa-amazon fa-3x"></i></a></li>
+               <li><a href="https://www.spotify.com/jp/"><i class="fab fa-spotify fa-3x"></i></a></li>
         </div>
         </div>
       </div>

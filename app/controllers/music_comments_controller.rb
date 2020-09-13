@@ -9,7 +9,7 @@ end
 
    def destroy
     	@music = Music.find(params[:music_id])
-    	comment = music_comment.find(params[:id])
+    	comment = MusicComment.find(params[:id])
     	comment.destroy
     	redirect_to music_path(@music)
 end

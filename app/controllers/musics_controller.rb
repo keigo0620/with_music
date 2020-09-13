@@ -34,6 +34,7 @@ class MusicsController < ApplicationController
   end
 
   def create
+    #binding.pry
   	@music = Music.new(music_params)
   	@music.user_id = current_user.id
   	if @music.save

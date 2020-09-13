@@ -68,6 +68,7 @@ gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'ransack'
 gem 'kaminari','~> 1.2.1'
+gem 'pry-rails'
 group :production do
   gem 'mysql2'
 end

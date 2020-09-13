@@ -4,47 +4,44 @@
 <% end %>
 
 <h2>Music detail</h2>
+<%= @user.name %>
+    <%= attachment_image_tag @user, :profile_image,  fallback: "no_image.jpg", size: "60x60" %>
 	<table class="table table-striped">
-		<tbody>
+		 <tbody>
 			<tr>
-            <th></th>
-            <th>アーティスト</th>
-            <th>タイトル</th>
-            <th>ジャンル</th>
-            <th>おすすめシーン</th>
-            <th>一言</th>
-            <th colspan="3"></th>
-            </tr>
+        <th></th>
+        <th>アーティスト</th>
+        <th>タイトル</th>
+        <th>ジャンル</th>
+        <th>おすすめシーン</th>
+        <th>一言</th>
+        <th colspan="3"></th>
+      </tr>
 			<tr>
-
-			 <td><%= link_to user_path(@user.id) do %></td>
-            <%= @user.name %>
-            <%#= link_to, user_path(music.user.id) %>
-              <%= attachment_image_tag @user, :profile_image,  fallback: "no_image.jpg", size: "60x60" %>
-            <% end %>
+          <td><%= link_to user_path(@user.id) do %></td>
           <td><%= @music.artist %></td>
 					<td><%=  @music.title  %></td>
 					<td><%= @music.genre.category %></td>
           <td><%= @music.location.seen %></td>
 					<td><%= @music.impression %></td>
 					<% if @music.user_id == current_user.id %>
-					   <td> <%= link_to "Edit", edit_music_path(@music.id) ,class:"btn-sm btn-success edit_music_10349" %></td>
-					    <td><%= link_to "Destroy", music_path(@music.id), method: :delete,  "data-confirm" => "本当に削除しますか？"  ,class:"btn-sm btn-danger destroy_book_10349"%></td>
-					    <td>
+					<td> <%= link_to "Edit", edit_music_path(@music.id) ,class:"btn-sm btn-success edit_music_10349" %></td>
+					<td><%= link_to "Destroy", music_path(@music.id), method: :delete,  "data-confirm" => "本当に削除しますか？"  ,class:"btn-sm btn-danger destroy_book_10349"%></td>
 				    <% end %>
-					</tr>
+				</tr>
 				</tbody>
 			</table>
 			<!--以下コメント機能実装-->
 			<%= form_for [@music, @music_comment] do |f| %>
-  <div class="row">
-    <div class="col-sm-12">
-    	<h3>コメント</h3>
+<div class="row">
+<div class="col-sm-12">
+    <h3>コメント</h3>
       <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
-    </div>
-  </div>
-  <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
-  <%= render 'music_comments/comments', music: @music %>
+</div>
+</div>
+      <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+      <%= render 'music_comments/comments', music: @music %>
+      <% end %>
 <% end %>
 </div>
 </div>
