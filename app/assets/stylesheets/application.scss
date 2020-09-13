@@ -18,14 +18,29 @@
 
 *{
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
  }
+.navbar-bottom {
+  margin-bottom: 0px;
+}
+.image {
+  text-align: center;
+}
+.navbar-right{
+  margin-top:10px;
+  margin-bottom:10px;
+}
 .text-muted{
 	font-size:30px;
   Color:#FFFFFF;
   text-align: center;
 
+}
+.form-group {
+  display: inline-block;
+  text-align: center;
+}
+.form-control-file{
+  display: inline-block;
 }
 .footer {
 	background-color:black;
@@ -59,60 +74,37 @@
 	text-align: center;
   background-color: #EEEEEE;
 }
-.example {/*親div*/
-  position: relative;/*相対配置*/
-  }
 
-.example p {
-  position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
-  font-size:20px;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
-  font-weight: bold;
-  font-size: 2em;
-  font-family :Quicksand, sans-serif;
-  }
-
-.example img {
-  width: 100%;
-  height: 50%;
-  }
 .MUSIC1 {
-  background-image: image-url(MUSIC1.jpg);
+  background-image: url(MUSIC1.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .MUSIC2 {
-  background-image: image-url(MUSIC2.jpg);
+  background-image: url(MUSIC2.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .MUSIC3 {
-  background-image: image-url(MUSIC3.jpg);
+  background-image: url(MUSIC3.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .MUSIC4 {
-  background-image: image-url(MUSIC4.jpg);
+  background-image: url(MUSIC4.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .MUSIC5 {
-  background-image: image-url(MUSIC5.jpg);
+  background-image: url(MUSIC5.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
@@ -122,7 +114,7 @@
   height: 600px;
 }
 .about1 {
-  background-image: image-url(about1.jpg);
+  background-image: url(about1.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
@@ -130,28 +122,28 @@
 }
 .about2 {
 font-family: "MS Pゴシック" ;
-  background-image: image-url(about2.jpg);
+  background-image: url(about2.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .about3 {
-  background-image: image-url(about3.jpg);
+  background-image: url(about3.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/
   font-size:30px;
 }
 .about4 {
-  background-image: image-url(about4.jpg);
+  background-image: url(about4.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: black;/*文字は白に*/
   font-size:30px;
 }
 .about5 {
-  background-image: image-url(about5.jpg);
+  background-image: url(about5.jpg);
   position: relative;
   position: absolute;/*絶対配置*/
   color: white;/*文字は白に*/

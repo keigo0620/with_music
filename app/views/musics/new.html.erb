@@ -1,11 +1,11 @@
 <div class="newbody">
 <div class="body-height">
 <div class="container">
-  <div class="field">
   <h1>新規投稿</h1>
-  <%= form_for @music, :url => {controller:  :musics, action: :create} do |f| %>
+    <%= form_for @music, :url => {controller:  :musics, action: :create} do |f| %>
+    <div class="form-group">
   <%= f.attachment_field :post_image %>
-</div>
+    </div>
       <h3>アーティスト</h3>
     <div class="field">
         <%= f.text_field :artist %>
